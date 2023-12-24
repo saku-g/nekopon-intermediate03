@@ -1,0 +1,69 @@
+// Spacing
+// margin・paddingのユーティリティクラス
+// -----------------------------------
+
+@use "../../global/" as *;
+
+// Variables
+// -------------------------
+// 余白の基準値とループ回数
+$_space-base: 5;
+$_loop-count: 20;
+$_properties: (
+  "m": "margin",
+  "p": "padding",
+);
+
+// {breakpoint\:}.u-{property}{sides}-{size}の形式でクラスを生成
+// ex) .u-mx-3, .md:u-py-3, .lg:u-mt-2
+@each $name, $breakpoint in $breakpoints {
+  // プレフィクス（0の場合はprefixなし）
+  $bp-prefix: if($breakpoint == 0, null, "#{$name}\\:");
+
+  @include mq($name) {
+    @for $i from 0 through $_loop-count {
+      // px -> remに変換
+      $size: calc($_space-base * $i / 16 * 1rem);
+
+      @each $shorthand, $property in $_properties {
+        // Horizontal(x)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}x-#{$i} {
+          #{$property}-left: $size;
+          #{$property}-right: $size;
+        }
+
+        // Vertical(y)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}y-#{$i} {
+          #{$property}-top: $size;
+          #{$property}-bottom: $size;
+        }
+
+        // Top(t)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}t-#{$i} {
+          #{$property}-top: $size;
+        }
+
+        // Right(r)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}r-#{$i} {
+          #{$property}-right: $size;
+        }
+
+        // Bottom(b)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}b-#{$i} {
+          #{$property}-bottom: $size;
+        }
+
+        // Left(l)
+        // -------------------------
+        .#{$bp-prefix}u-#{$shorthand}l-#{$i} {
+          #{$property}-left: $size;
+        }
+      }
+    }
+  }
+}

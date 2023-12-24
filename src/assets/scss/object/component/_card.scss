@@ -1,0 +1,16 @@
+@use "../../global/" as *;
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card__body {
+  padding-top: 1.25rem;
+}
+
+.c-card__thumbnail {
+  order: -1;
+  aspect-ratio: 350/180;
+  overflow: hidden;
+}

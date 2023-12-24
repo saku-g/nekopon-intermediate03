@@ -1,0 +1,9 @@
+.l-site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.l-site__main {
+  flex: 0 1 auto;
+}

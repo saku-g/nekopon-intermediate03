@@ -1,0 +1,9 @@
+@use "../../global/" as *;
+
+.c-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: none;
+  appearance: none;
+}
