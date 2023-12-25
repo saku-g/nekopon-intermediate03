@@ -3,5 +3,246 @@
   <head>
     {{> _head }}
   </head>
-  <body></body>
+  <body>
+    <svg aria-hidden="true" display="none">
+      <defs>
+        <!-- Wave -->
+        <symbol id="sound" viewBox="0 0 15 16">
+          <path
+            d="M0 5.92674L0 9.59596C0 10.1005 0.375 10.5133 0.833333 10.5133L3.33333 10.5133L6.075 13.5312C6.6 14.1091 7.5 13.6963 7.5 12.8799L7.5 2.63361C7.5 1.8172 6.6 1.40442 6.075 1.98232L3.33333 5.00943L0.833333 5.00943C0.375 5.00943 0 5.42222 0 5.92674ZM11.25 7.76135C11.25 6.13772 10.4 4.74341 9.16667 4.0646L9.16667 11.4489C10.4 10.7793 11.25 9.38498 11.25 7.76135ZM9.16667 0.835687V1.01915C9.16667 1.36772 9.375 1.67044 9.66667 1.79886C11.8167 2.74368 13.3333 5.06447 13.3333 7.76135C13.3333 10.4582 11.8167 12.779 9.66667 13.7238C9.36667 13.8523 9.16667 14.155 9.16667 14.5035V14.687C9.16667 15.2649 9.69167 15.6685 10.175 15.4667C13 14.2834 15 11.2838 15 7.76135C15 4.23889 13 1.2393 10.175 0.0559763C9.69167 -0.155004 9.16667 0.257784 9.16667 0.835687Z"
+          />
+        </symbol>
+        <!-- rectangle -->
+        <symbol id="rectangle" viewBox="0 0 195 30">
+          <path d="M0 0L194.962 0L165.778 30L0 30L0 0Z" />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="p-parallax">
+      <video src="/assets/media/bg_movie.mp4" autoplay muted loop playsinline class="p-parallax__video"></video>
+    </div>
+    <div class="l-site">
+      <!-- Header -->
+      <header class="l-site__header p-header">
+        <a class="p-skipLink u-visuallyHidden" href="#main">メインコンテンツにスキップ</a>
+        <div class="p-header__inner">
+          <p class="p-header__logo">
+            <a class="p-header__logoLink" href="/">Necopon Games</a>
+          </p>
+          <nav class="p-header__nav">
+            <h2 class="u-visuallyHidden">サイト内メニュー</h2>
+            <div class="p-globalNav">
+              <ul class="p-globalNav__list">
+                <li class="p-globalNav__item">
+                  <a class="p-globalNav__link" href="#story">Story</a>
+                </li>
+                <li class="p-globalNav__item">
+                  <a class="p-globalNav__link" href="#trailer">Trailer</a>
+                </li>
+                <li class="p-globalNav__item">
+                  <a class="c-button -primary" href="#">Play Now</a>
+                </li>
+              </ul>
+              <div class="p-globalNav__sound">
+                <button type="button" class="p-globalNav__soundButton">
+                  <span>Sound Off</span>
+                  <svg aria-hidden="true">
+                    <use href="#sound"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="l-site__main">
+        <!-- Hero -->
+        <div class="p-hero">
+          <div class="l-container">
+            <div class="p-hero__body">
+              <p class="p-hero__subTitle">VR Game</p>
+              <h1 class="p-hero__title">Planet Hunters</h1>
+              <p class="p-hero__copy">惑星を奪還せよ</p>
+              <div class="p-hero__button">
+                <a class="c-button -primary" href="#">Play Now</a>
+              </div>
+            </div>
+            <div class="p-hero__news">
+              <div class="p-pickupNews">
+                <time class="p-pickupNews__date" datetime="2030-02-20">2030.02.20</time>
+                <p class="p-pickupNews__title">バージョン5.6リリース：アバター・アイ</p>
+              </div>
+            </div>
+            <div class="p-hero__scroll" aria-hidden="true">Scroll</div>
+          </div>
+          <!-- /.l-container -->
+        </div>
+
+        <!-- Story -->
+        <section class="p-story">
+          <div class="l-container">
+            <div class="p-story__item">
+              <h2 class="c-title -primary">Story</h2>
+              <section>
+                <h3 class="p-story__title">奪われた故郷の星を取り戻せ</h3>
+                <p class="p-story__text">
+                  壮大なSFファンタジー銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る！
+                </p>
+                <figure class="p-story__imgWrapper">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcset="/assets/img/story01.webp, /assets/img/story01@2x.webp 2x"
+                      width="350"
+                      height="407"
+                    />
+                    <img
+                      src="/assets/img/story01.jpg"
+                      alt=""
+                      srcset="/assets/img/story01.jpg, /assets/img/story01@2x.jpg 2x"
+                      width="350"
+                      height="407"
+                      decoding="async"
+                    />
+                  </picture>
+                </figure>
+              </section>
+            </div>
+            <div class="p-story__item">
+              <h3 class="p-story__title">隠された陰謀を暴け 衝撃的な事実に驚愕</h3>
+              <p class="p-story__text">
+                ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ星間航行により惑星ネコチャンへあとわずか３時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
+              </p>
+              <figure class="p-story__imgWrapper">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="/assets/img/story02.webp, /assets/img/story02@2x.webp 2x"
+                    width="350"
+                    height="407"
+                  />
+                  <img
+                    src="/assets/img/story02.jpg"
+                    alt=""
+                    srcset="/assets/img/story02.jpg, /assets/img/story02@2x.jpg 2x"
+                    width="350"
+                    height="407"
+                    decoding="async"
+                  />
+                </picture>
+              </figure>
+            </div>
+          </div>
+          <!-- /.l-container -->
+        </section>
+
+        <!-- CTA -->
+        <div class="p-cta">
+          <svg class="p-cta__bg" aria-hidden="true">
+            <use href="#rectangle"></use>
+          </svg>
+          <div class="l-container">
+            <p class="p-cta__message">Are You Ready To Fight?</p>
+            <p class="p-cta__button">
+              <a class="c-button -primary" href="#"></a>
+            </p>
+          </div>
+          <!-- /.l-container -->
+          <svg class="p-cta__bg -reverse" aria-hidden="true">
+            <use href="#rectangle"></use>
+          </svg>
+        </div>
+
+        <!-- Trailer -->
+        <section class="p-trailer">
+          <div class="l-container">
+            <iframe
+              src="https://www.youtube.com/embed/bUDYpnBwzDo?si=nPmi9-LdmveCTbVA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="p-trailer__movie"
+            ></iframe>
+          </div>
+          <!-- /.l-container -->
+        </section>
+
+        <!-- CTA -->
+        <div class="p-cta">
+          <svg class="p-cta__bg" aria-hidden="true">
+            <use href="#rectangle"></use>
+          </svg>
+          <div class="l-container">
+            <p class="p-cta__message">Are You Ready To Fight?</p>
+            <p class="p-cta__button">
+              <a class="c-button -primary" href="#"></a>
+            </p>
+          </div>
+          <!-- /.l-container -->
+          <svg class="p-cta__bg -reverse" aria-hidden="true">
+            <use href="#rectangle"></use>
+          </svg>
+        </div>
+      </main>
+      <footer class="p-footer">
+        <div class="p-footer__inner">
+          <ul class="p-footer__social">
+            <li class="p-footer__scoialItem">
+              <!-- Load Facebook SDK for JavaScript -->
+              <div id="fb-root"></div>
+              <script
+                async
+                defer
+                crossorigin="anonymous"
+                src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0"
+                nonce="tzLI7h5e"
+              ></script>
+              <div
+                class="fb-like"
+                data-action="like"
+                data-href="URL"
+                data-layout="button_count"
+                data-share="true"
+              ></div>
+            </li>
+            <li class="p-footer__socialItem">
+              <a
+                href="https://twitter.com/intent/tweet?button_hashtag=&ref_src=twsrc%5Etfw"
+                class="twitter-hashtag-button"
+                data-text="このサイトをシェア"
+                data-url="https://sacck.me"
+                data-lang="ja"
+                data-show-count="false"
+              ></a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+              <div
+                class="line-it-button"
+                data-lang="ja"
+                data-type="share-b"
+                data-env="REAL"
+                data-url="http://sakucode.com/barber"
+                data-color="default"
+                data-size="small"
+                data-count="false"
+                data-ver="3"
+                style="display: none"
+              ></div>
+              <script
+                src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+                async="async"
+                defer="defer"
+              ></script>
+            </li>
+          </ul>
+          <p class="p-footer__copyright"><small>&copy;Necopon games</small></p>
+        </div>
+      </footer>
+    </div>
+    <!-- /.l-site -->
+  </body>
 </html>
