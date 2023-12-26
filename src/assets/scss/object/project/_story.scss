@@ -3,10 +3,17 @@
 .p-story {
   padding-block: fluid(50, 120, var(--sp-comp-width), var(--pc-comp-width));
   background-color: var(--base-color);
-  background-image: url("/assets/img/bg_story.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.webp .p-story {
+  background-image: url("/assets/img/bg_story.webp");
+}
+
+.np-webp .p-story {
+  background-image: url("/assets/img/bg_story.png");
 }
 
 .p-story__item {
