@@ -54,7 +54,9 @@
       </defs>
     </svg>
     <div class="p-parallax">
-      <video src="/assets/media/bg_movie.mp4" autoplay muted loop playsinline class="p-parallax__video"></video>
+      <video class="p-parallax-video" playsinline muted autoplay loop>
+        <source src="/assets/media/bg_movie.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="l-site">
       <!-- Header -->
@@ -97,7 +99,7 @@
       <!-- Main -->
       <main class="l-site__main" id="main">
         <!-- Hero -->
-        <div class="p-hero c-block -after -black">
+        <div class="p-hero c-bg -afterBlack" id="js-hero">
           <div class="p-hero__body">
             <p class="p-hero__subTitle" lang="en">VR Game</p>
             <h1 class="p-hero__title" lang="en">Planet<br aria-hidden="true" />Hunters</h1>
@@ -122,12 +124,15 @@
         <!-- Story -->
         <section class="p-story">
           <div class="l-container">
-            <div class="p-story__item">
-              <h2 class="c-title -primary">Story</h2>
-              <section>
-                <h3 class="p-story__title">奪われた故郷の星を取り戻せ</h3>
+            <div class="p-story__item -hasBigTitle">
+              <h2 class="c-title -primary p-story__bigTitle">Story</h2>
+              <section class="p-story__childItem">
+                <h3 class="p-story__title">
+                  <span class="u-block">奪われた故郷の星を取り戻せ</span
+                  ><span class="u-block">壮大なSFファンタジー</span>
+                </h3>
                 <p class="p-story__text">
-                  壮大なSFファンタジー銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る！
+                  銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る！
                 </p>
                 <figure class="p-story__imgWrapper">
                   <picture>
@@ -149,11 +154,15 @@
                 </figure>
               </section>
             </div>
-            <div class="p-story__item">
-              <h3 class="p-story__title">隠された陰謀を暴け 衝撃的な事実に驚愕</h3>
-              <p class="p-story__text">
-                ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ星間航行により惑星ネコチャンへあとわずか３時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
-              </p>
+            <section class="p-story__item">
+              <div class="p-story__body">
+                <h3 class="p-story__title">
+                  <span class="u-block">隠された陰謀を暴け</span><span class="u-block">衝撃的な事実に驚愕</span>
+                </h3>
+                <p class="p-story__text">
+                  ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ星間航行により惑星ネコチャンへあとわずか3時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
+                </p>
+              </div>
               <figure class="p-story__imgWrapper">
                 <picture>
                   <source
@@ -172,31 +181,25 @@
                   />
                 </picture>
               </figure>
-            </div>
+            </section>
           </div>
           <!-- /.l-container -->
         </section>
 
         <!-- CTA -->
-        <div class="p-cta">
-          <svg class="p-cta__bg" aria-hidden="true">
-            <use href="#rectangle"></use>
-          </svg>
+        <div class="p-cta c-bg -beforeBlack -afterMain">
           <div class="l-container">
-            <p class="p-cta__message">Are You Ready To Fight?</p>
+            <p class="p-cta__message" lang="en">Are You Ready To Fight?</p>
             <p class="p-cta__button">
-              <a class="c-button -primary" href="#"></a>
+              <a class="c-button -primary" href="#">Play Now</a>
             </p>
           </div>
-          <!-- /.l-container -->
-          <svg class="p-cta__bg -reverse" aria-hidden="true">
-            <use href="#rectangle"></use>
-          </svg>
         </div>
 
         <!-- Trailer -->
         <section class="p-trailer">
           <div class="l-container">
+            <h2 class="c-title -primary -black">Trailer</h2>
             <iframe
               src="https://www.youtube.com/embed/bUDYpnBwzDo?si=nPmi9-LdmveCTbVA"
               title="YouTube video player"
@@ -210,40 +213,35 @@
         </section>
 
         <!-- CTA -->
-        <div class="p-cta">
-          <svg class="p-cta__bg" aria-hidden="true">
-            <use href="#rectangle"></use>
-          </svg>
+        <div class="p-cta c-bg -beforeMain -afterBlack">
           <div class="l-container">
             <p class="p-cta__message">Are You Ready To Fight?</p>
             <p class="p-cta__button">
-              <a class="c-button -primary" href="#"></a>
+              <a class="c-button -primary" href="#">Play Now</a>
             </p>
           </div>
-          <!-- /.l-container -->
-          <svg class="p-cta__bg -reverse" aria-hidden="true">
-            <use href="#rectangle"></use>
-          </svg>
         </div>
       </main>
-      <footer class="p-footer">
+      <footer class="p-footer" id="js-footer">
         <div class="p-footer__inner">
           <ul class="p-footer__social">
-            <li class="p-footer__scoialItem">
+            <li class="p-footer__socialItem">
               <!-- Load Facebook SDK for JavaScript -->
+
               <div id="fb-root"></div>
               <script
                 async
                 defer
                 crossorigin="anonymous"
-                src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0"
-                nonce="tzLI7h5e"
+                src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v12.0"
+                nonce="l8bnbbly"
               ></script>
               <div
                 class="fb-like"
                 data-action="like"
-                data-href="URL"
+                data-href="https://example.com"
                 data-layout="button_count"
+                data-size="large"
                 data-share="true"
               ></div>
             </li>
@@ -258,7 +256,7 @@
               ></a>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </li>
-            <li>
+            <li class="p-footer__socialItem">
               <div
                 class="line-it-button"
                 data-lang="ja"
@@ -279,6 +277,9 @@
             </li>
           </ul>
           <p class="p-footer__copyright"><small>&copy;Necopon games</small></p>
+          <div class="p-footer__cta" id="js-footerCta">
+            <a class="c-button -primary -full" href="#">Play Now</a>
+          </div>
         </div>
       </footer>
     </div>

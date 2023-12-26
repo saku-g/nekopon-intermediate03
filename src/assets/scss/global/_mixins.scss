@@ -7,11 +7,11 @@
 // -------------------------
 $breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
+  sm: calc(576 / 16 * 1em),
+  md: calc(768 / 16 * 1em),
+  lg: calc(992 / 16 * 1em),
+  xl: calc(1200 / 16 * 1em),
+  xxl: calc(1400 / 16 * 1em),
 ) !default;
 
 @mixin mq($name, $not: false) {

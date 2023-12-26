@@ -60,3 +60,7 @@
     }
   }
 }
+
+.is-heroOver .p-scroll::after {
+  animation: none;
+}

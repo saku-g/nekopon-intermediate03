@@ -33,7 +33,7 @@ html {
 body {
   box-sizing: border-box;
   min-block-size: 100%;
-  background-color: #000;
+  background-color: var(--base-color);
   color: var(--text-color);
   font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
@@ -41,6 +41,7 @@ body {
   letter-spacing: 0.05em;
   line-height: 1.6;
   text-rendering: optimizelegibility;
+  font-feature-settings: "palt";
 }
 
 ul {

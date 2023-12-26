@@ -7,6 +7,10 @@
   background-color: transparent;
 }
 
+.is-heroOver .p-header {
+  mix-blend-mode: difference;
+}
+
 .p-header__inner {
   display: flex;
   position: relative;

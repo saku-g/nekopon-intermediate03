@@ -29,3 +29,7 @@
     translate: 0 -1px;
   }
 }
+
+.c-button:where(.-full) {
+  width: 100%;
+}

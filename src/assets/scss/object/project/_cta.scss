@@ -1,0 +1,18 @@
+@use "../../global/" as *;
+
+.p-cta {
+  padding-block: fluid(70, 100, var(--sp-comp-width), var(--pc-comp-width));
+}
+
+.p-cta__message {
+  font-size: fluid(32, 64, var(--sp-comp-width), var(--pc-comp-width));
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.p-cta__button {
+  margin-top: rem(20);
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 import { audioToggle } from './audioToggle';
+import { observer } from './observer';
 
 audioToggle();
-
-console.log('main.js');
+observer();

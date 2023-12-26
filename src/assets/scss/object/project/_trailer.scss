@@ -1,0 +1,17 @@
+@use "../../global/" as *;
+
+.p-trailer {
+  padding-block: fluid(50, 110, var(--sp-comp-width), var(--pc-comp-width));
+  background-color: var(--main-color);
+}
+
+.p-trailer__movie {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}

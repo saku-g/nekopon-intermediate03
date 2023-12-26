@@ -1,5 +1,119 @@
 @use "../../global/" as *;
 
 .p-story {
+  padding-block: fluid(50, 120, var(--sp-comp-width), var(--pc-comp-width));
   background-color: var(--base-color);
+  background-image: url("/assets/img/bg_story.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.p-story__item {
+  --body-width: calc(600 / var(--max-width) * 100%);
+
+  & + & {
+    margin-top: rem(50);
+
+    @include mq(md) {
+      margin-top: rem(80);
+    }
+  }
+
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    column-gap: calc(80 / var(--max-width) * 100%);
+  }
+}
+
+.p-story__body {
+  @include mq(md) {
+    width: var(--body-width);
+  }
+}
+
+.p-story__imgWrapper {
+  width: 90%;
+  margin-top: rem(30);
+  margin-inline: auto;
+  transform: skew(-5deg, 0);
+  box-shadow: 7px 7px rgb(var(--main-color-rgb) / 100%);
+
+  @include mq(md) {
+    flex: 1;
+    order: -1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.p-story__title {
+  font-family: var(--font-ja);
+  font-size: rem(24);
+  font-weight: 900;
+  line-height: 1.5;
+
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.p-story__text {
+  margin-top: rem(20);
+  font-size: rem(15);
+  line-height: 1.8;
+
+  @include mq(md) {
+    margin-top: rem(30);
+    font-size: 1rem;
+  }
+}
+
+// h2をコンテンツに含める場合
+.p-story__item.-hasBigTitle {
+  @include mq(md) {
+    display: grid;
+    grid-template:
+      "h2 image" auto
+      "h3 image" auto
+      "text image" 1fr / var(--body-width) 1fr;
+    align-items: start;
+  }
+
+  .p-story__bigTitle {
+    margin-bottom: rem(30);
+
+    @include mq(md) {
+      grid-area: h2;
+      margin-bottom: rem(40);
+    }
+  }
+
+  .p-story__childItem {
+    display: contents;
+  }
+
+  .p-story__title {
+    @include mq(md) {
+      grid-area: h3;
+    }
+  }
+
+  .p-story__text {
+    @include mq(md) {
+      grid-area: text;
+    }
+  }
+
+  .p-story__imgWrapper {
+    @include mq(md) {
+      grid-area: image;
+      order: 0;
+    }
+  }
 }

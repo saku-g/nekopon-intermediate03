@@ -3,3 +3,25 @@
 .c-title {
   font-weight: 700;
 }
+
+.c-title:where(.-primary) {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  color: var(--main-color);
+  font-size: fluid(50, 80, var(--sp-comp-width), var(--pc-comp-width));
+  line-height: 1;
+  text-transform: uppercase;
+
+  &.-black {
+    color: #000;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 6px;
+    background-color: currentcolor;
+  }
+}

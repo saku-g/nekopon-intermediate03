@@ -34,6 +34,10 @@
   }
 }
 
+.is-heroOver .p-pickupNews__inner {
+  animation: none;
+}
+
 .p-pickupNews__date {
   color: var(--text-color);
 }
