@@ -1,5 +1,5 @@
-import { hello } from './sub.js';
+import { audioToggle } from './audioToggle';
 
-hello();
+audioToggle();
 
 console.log('main.js');

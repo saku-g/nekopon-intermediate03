@@ -1,18 +1,26 @@
 @use "../global/" as *;
 
 :root {
-  --font-base: "Exo" "Noto Sans JP", sans-serif;
+  --font-base: "Exo", "Noto Sans JP", sans-serif;
+  --font-ja: "Noto Sans JP", sans-serif;
   --base-color: #000;
   --main-color: #00fff5;
-  --content-width: 1110;
+  --main-color-rgb: 0 255 245;
+  --text-color: #fff;
+  --gray-color: #bfbfbf;
+  --max-width: 1110;
+  --sp-comp-width: 390;
+  --pc-comp-width: 1440;
+  --content-px: 20;
 
-  // Design Comp Width
-  // -------------------------
-  // デザインカンプ幅。ブレイクポイントごとに上書き
-  --comp-width: 390;
+  @include mq(md) {
+    --content-px: 30;
+  }
 
-  @include mq(lg) {
-    --comp-width: 1440;
+  --header-height: 60;
+
+  @include mq(md) {
+    --header-height: 100;
   }
 }
 
@@ -25,9 +33,12 @@ html {
 body {
   box-sizing: border-box;
   min-block-size: 100%;
-  color: var(--color-text);
+  background-color: #000;
+  color: var(--text-color);
   font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   line-height: 1.6;
   text-rendering: optimizelegibility;
 }

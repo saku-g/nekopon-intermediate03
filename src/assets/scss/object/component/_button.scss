@@ -7,3 +7,25 @@
   border: none;
   appearance: none;
 }
+
+.c-button:where(.-primary) {
+  min-width: 170px;
+  transition-property: box-shadow translate;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  background-color: var(--main-color);
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    min-width: 230px;
+    font-size: rem(18);
+  }
+
+  @include hover {
+    box-shadow: 0 0 16px 6px rgb(var(--main-color-rgb) / 40%);
+    translate: 0 -1px;
+  }
+}

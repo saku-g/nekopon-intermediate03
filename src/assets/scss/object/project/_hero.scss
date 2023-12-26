@@ -1,0 +1,69 @@
+@use "../../global/" as *;
+
+.p-hero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: calc(100vh - var(--header-height) * 1px);
+}
+
+.p-hero__body {
+  margin-left: calc(40 / var(--sp-comp-width) * 100%);
+
+  @include mq(md) {
+    margin-left: calc(160 / var(--pc-comp-width) * 100%);
+  }
+}
+
+.p-hero__subTitle {
+  margin-bottom: rem(20);
+  font-size: fluid(22, 32, var(--sp-comp-width), var(--pc-comp-width));
+  font-weight: 700;
+  letter-spacing: 0.2em;
+
+  @include mq(md) {
+    margin-bottom: rem(30);
+  }
+}
+
+.p-hero__title {
+  font-size: fluid(76, 140, var(--sp-comp-width), var(--pc-comp-width));
+  font-weight: 600;
+  line-height: calc(68 / 76 * 1em);
+}
+
+.p-hero__copy {
+  margin-top: rem(10);
+  font-size: fluid(22, 34, var(--sp-comp-width), var(--pc-comp-width));
+  letter-spacing: 0.6em;
+
+  @include mq(md) {
+    letter-spacing: 1em;
+  }
+}
+
+.p-hero__button {
+  margin-top: rem(30);
+
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+.p-hero__news {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  width: calc(200 / var(--sp-comp-width) * 100%);
+
+  @include mq(md) {
+    right: 30px;
+    width: calc(360 / var(--pc-comp-width) * 100%);
+  }
+}
+
+.p-hero__scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}

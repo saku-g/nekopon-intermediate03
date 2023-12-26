@@ -1,0 +1,21 @@
+@use "../../global/" as *;
+
+.p-soundSwitcher {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(6);
+  line-height: inherit;
+}
+
+.p-soundSwitcher__text {
+  color: var(--gray-color);
+  font-size: rem(13);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.p-soundSwitcher__icon {
+  width: rem(16);
+  height: rem(16);
+  fill: var(--gray-color);
+}

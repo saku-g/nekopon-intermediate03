@@ -15,8 +15,8 @@
 
 // px -> vw
 // -------------------------
-@function vw($px) {
-  @return calc(#{$px} / var(--comp-width) * 100vw);
+@function vw($px, $vw) {
+  @return calc(#{$px} / $vw * 100vw);
 }
 
 // clampの推奨値を計算

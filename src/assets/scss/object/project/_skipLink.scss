@@ -1,0 +1,10 @@
+.p-skipLink {
+  position: absolute;
+  z-index: 5;
+  padding: 0.5em 1em;
+  background-color: rgb(255 255 255 / 80%);
+  color: var(--base-color);
+  font-weight: 700;
+  text-align: center;
+  inset: 0 0 auto;
+}

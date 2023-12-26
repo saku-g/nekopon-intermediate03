@@ -1,26 +1,38 @@
 @use "../../global/" as *;
 
+.p-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: transparent;
+}
+
 .p-header__inner {
   display: flex;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  padding-block: rem(20);
-
-  @include mq(md) {
-    padding-block: rem(50);
-  }
+  justify-content: space-between;
+  height: rem(var(--header-height));
+  margin-inline: auto;
+  padding-inline: calc(var(--content-px) * 1px);
 }
 
 .p-header__logo {
-  margin: 0;
   line-height: 1;
+
+  svg {
+    width: 120px;
+    height: 15px;
+    fill: var(--main-color);
+    vertical-align: middle;
+
+    @include mq(md) {
+      width: 172px;
+      height: 21px;
+    }
+  }
 }
 
-.p-header__logoLink {
-  display: block;
-  width: 200px;
-}
-
-.p-header__logoImg {
-  width: 100%;
+.p-header__nav {
+  margin-left: 8px;
 }
