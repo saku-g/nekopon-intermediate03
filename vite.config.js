@@ -20,6 +20,7 @@ const pageObject = Object.fromEntries(
 
 // https://ja.vitejs.dev/config/
 export default defineConfig({
+  base: '/nekopon-intermediate03/',
   root: 'src',
   publicDir: '../public',
   server: {
