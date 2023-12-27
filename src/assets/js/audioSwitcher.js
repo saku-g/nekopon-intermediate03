@@ -1,4 +1,4 @@
-export function audioToggle() {
+export function audioSwitcher() {
   const switcher = document.getElementById('js-soundSwitcher');
   const switcherText = switcher.querySelector('.p-soundSwitcher__text');
   const audioEl = document.getElementById('js-audio');

@@ -3,6 +3,10 @@ import { SetObserver } from './libs/setObserver';
 export function observer() {
   const footerCta = document.getElementById('js-footerCta');
 
+  /**
+   * heroセクションを監視する関数
+   * @param entries - 監視対象要素
+   */
   const heroObserve = (entries) => {
     if (!entries[0].isIntersecting) {
       document.documentElement.classList.add('is-heroOver');
@@ -13,6 +17,10 @@ export function observer() {
     }
   };
 
+  /**
+   * footerを監視する関数
+   * @param entries - 監視対象要素
+   */
   const footerObserve = (entries) => {
     if (entries[0].isIntersecting) {
       footerCta.classList.remove('is-visible');
